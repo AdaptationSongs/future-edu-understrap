@@ -1,0 +1,112 @@
+html {
+    /* Smooth scrolling for in page anchors */
+    scroll-behavior: smooth;
+}
+
+/* make main navigation menus appear on hover */
+.dropdown:hover>.dropdown-menu {
+    display: block;
+    max-height: 400px;
+    opacity: 1;
+    -webkit-transition: opacity .3s ease, max-height .3s ease;
+    -moz-transition: opacity .3s ease, max-height .3s ease;
+    transition: opacity .3s ease, max-height .3s ease;
+}
+.dropdown>.dropdown-menu {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .3s ease, max-height .3s ease;
+    -moz-transition: opacity .3s ease, max-height .3s ease;
+    transition: opacity .3s ease, max-height .3s ease;
+}
+.dropdown-menu {
+    margin: -0.125rem 0 0;
+}
+.dropdown>.dropdown-toggle:active {
+    pointer-events: none;
+}
+
+h2 {
+    padding-top: 3em;
+}
+
+/* before scroll */
+#wrapper-navbar a.navbar-brand {
+    font-size: 2.3rem;
+    -webkit-transition: font-size .5s ease;
+    -moz-transition: font-size .5s ease;
+    transition: font-size .5s ease;
+    /* Keep hamburger menu on same line as logo */
+    max-width: 78%;
+}
+.custom-logo-link img {
+    width: auto;
+    max-height: 200px;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+}
+/* after scroll */
+#page.scrolled #wrapper-navbar a.navbar-brand {
+    font-size: 1.25rem;
+    -webkit-transition: font-size .5s ease;
+    -moz-transition: font-size .5s ease;
+    transition: font-size .5s ease;
+}
+#page.scrolled .custom-logo-link img {
+    width: auto;
+    max-height: 32px;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+}
+#page.scrolled {
+    padding-top: 3rem;
+}
+body.logged-in #page.scrolled nav.navbar {
+    padding-top: 32px;
+}
+
+/* custom colors */
+#wrapper-footer-full, #wrapper-static-hero {
+    background-color: lighten($body-bg, 5%);
+}
+
+.wp-block-image figcaption {
+    color: $secondary;
+}
+
+hr {
+    border-top: 1px solid $secondary;
+}
+
+.tagline {
+    color: $secondary;
+    font-size: 1.3rem;
+}
+
+.cn-fa-inaturalist a {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+    margin: 2px;
+    border-radius: 0%;
+    background-color: #eeeeee;
+}
+
+/* Gutenberg wide and full alignment options */
+.entry-content .alignwide {
+    margin-left  : -80px;
+    margin-right : -80px;
+}
+.entry-content .alignfull {
+    margin-left  : calc( -100vw / 2 + 100% / 2 );
+    margin-right : calc( -100vw / 2 + 100% / 2 );
+    max-width    : 100vw;
+}
+.alignfull img {
+    width: 100vw;
+}

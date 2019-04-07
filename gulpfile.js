@@ -3,7 +3,6 @@ var gulp = require( 'gulp' );
 var plumber = require( 'gulp-plumber' );
 var sass = require( 'gulp-sass' );
 var watch = require( 'gulp-watch' );
-var cssnano = require( 'gulp-cssnano' );
 var rename = require( 'gulp-rename' );
 var concat = require( 'gulp-concat' );
 var uglify = require( 'gulp-uglify' );
@@ -74,24 +73,6 @@ gulp.task( 'imagemin-watch', ['imagemin'], function( ) {
 
 });
 
-// Run:
-// gulp cssnano
-// Minifies CSS files
-gulp.task( 'cssnano', function() {
-  return gulp.src( paths.css + '/child-theme.css' )
-    .pipe( sourcemaps.init( { loadMaps: true } ) )
-    .pipe( plumber( {
-            errorHandler: function( err ) {
-                console.log( err );
-                this.emit( 'end' );
-            }
-        } ) )
-    .pipe( rename( { suffix: '.min' } ) )
-    .pipe( cssnano( { discardComments: { removeAll: true } } ) )
-    .pipe( sourcemaps.write( './' ) )
-    .pipe( gulp.dest( paths.css ) );
-});
-
 gulp.task( 'minifycss', function() {
   return gulp.src( paths.css + '/child-theme.css' )
   .pipe( sourcemaps.init( { loadMaps: true } ) )
@@ -127,25 +108,29 @@ gulp.task( 'browser-sync', function() {
 // Run:
 // gulp watch-bs
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
-gulp.task( 'watch-bs', ['browser-sync', 'watch', 'scripts'], function() { 
+gulp.task( 'watch-bs', ['browser-sync', 'watch', 'scripts'], function() {
 } );
 
-// Run: 
-// gulp scripts. 
+// Run:
+// gulp scripts.
 // Uglifies and concat all JS files into one
 gulp.task( 'scripts', function() {
     var scripts = [
 
         // Start - All BS4 stuff
-        paths.dev + '/js/bootstrap4/bootstrap.js',
+       paths.dev + '/js/bootstrap4/bootstrap.bundle.js',
 
         // End - All BS4 stuff
 
         paths.dev + '/js/skip-link-focus-fix.js',
 
+        // RWD image map
+        paths.dev + '/js/jquery.rwdImageMaps.js',
+
         // Adding currently empty javascript file to add on for your own themes´ customizations
         // Please add any customizations to this .js file only!
         paths.dev + '/js/custom-javascript.js'
+
     ];
   gulp.src( scripts )
     .pipe( concat( 'child-theme.min.js' ) )
@@ -197,15 +182,9 @@ gulp.task( 'copy-assets', function() {
     gulp.src( paths.node + 'undescores-for-npm/js/skip-link-focus-fix.js' )
         .pipe( gulp.dest( paths.dev + '/js' ) );
 
-// Copy Popper JS files
-    gulp.src( paths.node + 'popper.js/dist/umd/popper.min.js' )
-        .pipe( gulp.dest( paths.js + paths.vendor ) );
-    gulp.src( paths.node + 'popper.js/dist/umd/popper.js' )
-        .pipe( gulp.dest( paths.js + paths.vendor ) );
-
 // UnderStrap SCSS files
     gulp.src( paths.node + 'understrap/sass/**/*.scss' )
-        .pipe( gulp.dest( paths.dev + '/sass/understrap' ) );    
+        .pipe( gulp.dest( paths.dev + '/sass/understrap' ) );
 
     return stream;
 });

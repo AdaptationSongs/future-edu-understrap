@@ -32,3 +32,16 @@ function add_child_theme_textdomain() {
     load_child_theme_textdomain( 'understrap-child', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
+
+// custom widget areas
+function init_my_widgets() {
+    register_sidebar( array(
+        'name' => 'Under Logo',
+        'id' => 'under_logo',
+        'before_widget' => '<div id="under-logo">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2>',
+        'after_title' => '</h2>')
+    );
+}
+add_action( 'widgets_init', 'init_my_widgets' );
