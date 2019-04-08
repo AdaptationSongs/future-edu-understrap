@@ -32,6 +32,12 @@ function add_child_theme_textdomain() {
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
 
+// Gutenberg wide and full align options	
+function my_theme_setup() {
+    add_theme_support( 'align-wide' );
+}
+add_action( 'after_setup_theme', 'my_theme_setup' );
+
 // custom widget areas
 function init_my_widgets() {
     register_sidebar( array(
