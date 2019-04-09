@@ -11609,7 +11609,7 @@ h2 {
 
 .custom-logo-link img {
   width: auto;
-  max-height: 200px;
+  max-height: 100px;
   -webkit-transition: all .5s ease;
   transition: all .5s ease; }
 
