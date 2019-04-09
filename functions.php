@@ -38,12 +38,21 @@ function my_theme_setup() {
 }
 add_action( 'after_setup_theme', 'my_theme_setup' );
 
+//add SVG to allowed file uploads
+function add_file_types_to_uploads($file_types){
+    $new_filetypes = array();
+    $new_filetypes['svg'] = 'image/svg+xml';
+    $file_types = array_merge($file_types, $new_filetypes);
+    return $file_types;
+}
+add_action('upload_mimes', 'add_file_types_to_uploads');
+
 // custom widget areas
 function init_my_widgets() {
     register_sidebar( array(
-        'name' => 'Under Logo',
-        'id' => 'under_logo',
-        'before_widget' => '<div id="under-logo">',
+        'name' => 'Navbar',
+        'id' => 'navbar',
+        'before_widget' => '<div id="navbar-widgets">',
         'after_widget' => '</div>',
         'before_title' => '<h2>',
         'after_title' => '</h2>')

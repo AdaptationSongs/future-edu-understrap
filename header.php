@@ -36,7 +36,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<?php if ( 'container' == $container ) : ?>
 			<div class="container" >
 		<?php endif; ?>
-                                        <div id="logo-wrapper">
 					<!-- Your site title as branding in the menu -->
 					<?php if ( ! has_custom_logo() ) { ?>
 
@@ -53,9 +52,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<?php } else {
 						the_custom_logo();
-					} ?><!-- end custom logo -->
-						<?php dynamic_sidebar( 'under_logo' ); ?>
-					</div>
+						} ?><!-- end custom logo -->
+
+					<?php dynamic_sidebar( 'navbar' ); ?>
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
 					<span class="navbar-toggler-icon"></span>
