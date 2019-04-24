@@ -11626,7 +11626,7 @@ h2 {
   transition: all .5s ease; }
 
 #page.scrolled {
-  padding-top: 3rem; }
+  padding-top: 6rem; }
 
 body.logged-in #page.scrolled nav.navbar {
   padding-top: 32px; }
