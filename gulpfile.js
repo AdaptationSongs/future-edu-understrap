@@ -195,6 +195,9 @@ gulp.task( 'scripts', function() {
 
         // RWD image map
         paths.dev + '/js/jquery.rwdImageMaps.js',
+
+        // counter
+        './Countup/js/jquery.knob.js',
 	];
 	gulp
 		.src( scripts, { allowEmpty: true } )

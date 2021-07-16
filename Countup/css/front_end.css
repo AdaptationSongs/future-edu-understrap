@@ -1,5 +1,4 @@
 .entry-content {
-    background-color: #212529;
     padding: 0px 0 0px 0;
 	font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
@@ -18,7 +17,7 @@ canvas {
 }
 
 
-#wpdevart_countdown_3{width:100%;}#wpdevart_countdown_3 .wpdevart_countdown_extend_element{width:115px;height:115px;}#wpdevart_countdown_3 .wpdevart_countdown_extend_element{margin-right:20px;}#wpdevart_countdown_3 .wpdevart_countdown_extend_element div.wpdevart_countdown_background{background-color:#212529;}#wpdevart_countdown_3 .time_left_extended{font-size:36px;color:#ba9f5c;margin:10px 0px 0px 0px;}#wpdevart_countdown_3 .time_text{font-size:17px;color:#f2efde;font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";padding:0px 0px 0px 0px;margin:0px 0px 24px 0px;}#wpdevart_countdown_3 .wpdevart_countdown_extend_element{visibility: hidden;}
+#wpdevart_countdown_3{width:100%;}#wpdevart_countdown_3 .wpdevart_countdown_extend_element{width:115px;height:115px;}#wpdevart_countdown_3 .wpdevart_countdown_extend_element{margin-right:20px;}#wpdevart_countdown_3 .wpdevart_countdown_extend_element div.wpdevart_countdown_background{}#wpdevart_countdown_3 .time_left_extended{font-size:36px;color:$secondary;margin:10px 0px 0px 0px;}#wpdevart_countdown_3 .time_text{font-size:17px;font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";padding:0px 0px 0px 0px;margin:0px 0px 24px 0px;}#wpdevart_countdown_3 .wpdevart_countdown_extend_element{visibility: hidden;}
 
 
 
@@ -73,7 +72,7 @@ canvas {
 	top: 50%;
     transform: translate(-50%,-50%);
 	border-radius: 50%;
-	border: 2px solid #7e893d;
+	border: 2px solid $primary;
 }
 
 /* vertical slider */

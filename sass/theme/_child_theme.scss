@@ -87,7 +87,7 @@ hr {
 }
 
 .tagline {
-    color: $secondary;
+    background-color: $secondary;
     font-size: 1.3rem;
 }
 
@@ -114,3 +114,7 @@ hr {
 .alignfull img, .alignfull.wp-block-cover {
     width: 100vw;
 }
+
+/* counter */
+@import "../../Countup/css/front_end";
+@import "../../Countup/css/effects";

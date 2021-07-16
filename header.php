@@ -20,12 +20,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
-	<link rel='stylesheet' id='wpdevart_countdown_extend_front-css'  href='https://songsofadaptation.org/wp-content/themes/understrap-child/Countup/css/front_end.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='wpdevart-effects-css'  href='https://songsofadaptation.org/wp-content/themes/understrap-child/Countup/css/effects.css' type='text/css' media='all' />
-
-	<script type='text/javascript' src='https://songsofadaptation.org/wp-content/themes/understrap-child/Countup/js/jquery.js'></script>
-	<script type='text/javascript' src='https://songsofadaptation.org/wp-content/themes/understrap-child/Countup/js/standart_countdown.js'></script>
-	<script type='text/javascript' src='https://songsofadaptation.org/wp-content/themes/understrap-child/Countup/js/jquery.knob.js'></script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -87,8 +81,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	</div><!-- #wrapper-navbar end -->
 	
-	<div class="container">
-		<div class="tagline mx-auto text-center">
+	<div class="tagline">
+		<div class="container mx-auto text-center">
 			<?php bloginfo( 'description' ); ?>
 		</div>
 	</div>

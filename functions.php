@@ -22,13 +22,14 @@ function theme_enqueue_styles() {
     wp_enqueue_style( 'child-understrap-styles', get_stylesheet_directory_uri() . '/css/child-theme.min.css', array(), $the_theme->get( 'Version' ) );
     wp_enqueue_script( 'jquery');
     wp_enqueue_script( 'child-understrap-scripts', get_stylesheet_directory_uri() . '/js/child-theme.min.js', array(), $the_theme->get( 'Version' ), true );
+    wp_enqueue_script( 'countup', get_stylesheet_directory_uri() . '/Countup/js/standart_countdown.js', array(), $the_theme->get( 'Version' ), true );
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
     }
 }
 
 function add_child_theme_textdomain() {
-    load_child_theme_textdomain( 'understrap-child', get_stylesheet_directory() . '/languages' );
+    load_child_theme_textdomain( 'future-edu-understrap', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
 
