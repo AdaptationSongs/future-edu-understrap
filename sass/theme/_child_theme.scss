@@ -101,6 +101,15 @@ hr {
     background-color: #eeeeee;
 }
 
+.has-background.primary {
+    background-color: $primary;
+    color: rgba(255, 255, 255, .5);
+}
+
+.wp-block-button.primary a {
+    background-color: $primary;
+}
+
 /* Gutenberg wide and full alignment options */
 .entry-content .alignwide {
     margin-left  : -80px;
